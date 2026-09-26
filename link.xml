@@ -1,0 +1,5 @@
+<linker>
+  <assembly fullname="AdjustSdk.Scripts" preserve="all"/>
+  <assembly fullname="WASD.Adjust" preserve="all"/>
+  <assembly fullname="WASD.Adjust.Editor" preserve="all"/>
+</linker>

@@ -1,0 +1,22 @@
+﻿{
+    "name": "Unity.Adjust.Editor",
+    "rootNamespace": "Unity.Adjust.Editor",
+    "references": [
+        "Unity.Core",
+        "Unity.Adjust",
+        "Unity.Core.Editor",
+        "AdjustSdk.Scripts",
+        "AdjustSdk.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
