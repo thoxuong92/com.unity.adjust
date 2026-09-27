@@ -1,4 +1,4 @@
-﻿# Unity Adjust Service (UPM Package)
+# Unity Adjust Service (UPM Package)
 
 Package module tích hợp giải pháp phân bổ cài đặt người dùng (**Attribution Tracking**), sự kiện trong ứng dụng (**In-App Events**), liên kết sâu (**Deep Linking**), SKAdNetwork và theo dõi doanh thu quảng cáo (**Impression-Level Ad Revenue**) từ **Adjust** cho **Unity Core Framework**.
 
@@ -71,4 +71,5 @@ TrackingService.TrackEvent("purchase_token_xyz", 4.99, "USD");
 ---
 
 ## 👨‍💻 Tác Giả & Bản Quyền
+- **Tác giả**: **joukyuu**
 - **Repository**: [thoxuong92/com.unity.adjust](https://github.com/thoxuong92/com.unity.adjust.git)
