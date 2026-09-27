@@ -47,10 +47,7 @@ namespace AdjustSdk
             var isAdjustManifestUsed = false;
             var androidPluginsPath = Path.Combine(Application.dataPath, "Plugins/Android");
             var adjustManifestPath = "Packages/com.unity.adjust/SDK/Adjust/Native/Android/AdjustAndroidManifest.xml";
-            if (!File.Exists(adjustManifestPath))
-            {
-                adjustManifestPath = "Packages/com.wasdmobile.adjust/SDK/Adjust/Native/Android/AdjustAndroidManifest.xml";
-            }
+            
             if(!File.Exists(adjustManifestPath))
             {
                 adjustManifestPath = Path.Combine(Application.dataPath, "service-adjust/SDK/Adjust/Native/Android/AdjustAndroidManifest.xml");
@@ -261,7 +258,10 @@ namespace AdjustSdk
 
         private static bool AddBroadcastReceiver(XmlDocument manifest)
         {
-            // We're looking for existence of broadcast receiver in the AndroidManifest.xml
+            // Deprecated by Google since 2020. Modern Adjust SDK uses Google Play Install Referrer API (BIND_GET_INSTALL_REFERRER_SERVICE).
+            // Injecting android.permission.INSTALL_PACKAGES causes rejection on Google Play Store.
+            return false;
+#if false
             // Check out the example below how that usually looks like:
 
             // <manifest
@@ -345,6 +345,7 @@ namespace AdjustSdk
             return true;
         }
 
+#endif
         private static bool DoesAdjustBroadcastReceiverExist(XmlDocument manifest)
         {
             var xpath = "/manifest/application/receiver[@android:name='com.adjust.sdk.AdjustReferrerReceiver']";
